@@ -90,7 +90,7 @@ object ScClsStubBuilder {
 }
 
 class ScClsStubBuilder extends ClsStubBuilder {
-  override def getStubVersion: Int = StubVersion.STUB_VERSION
+  override def getStubVersion: Int = StubVersion.STUB_VERSION + super.getStubVersion
 
   override def buildFileStub(content: FileContent): PsiFileStub[ScalaFile] =
     content.getFile match {
